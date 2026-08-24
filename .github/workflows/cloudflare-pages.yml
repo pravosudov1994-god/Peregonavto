@@ -2,6 +2,9 @@ name: Deploy to Cloudflare Pages
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
   pull_request:
     branches:
       - main
@@ -17,7 +20,7 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    name: Deploy Peregonavto Preview
+    name: Deploy Peregonavto
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -34,7 +37,7 @@ jobs:
             npx --yes wrangler@latest pages project create peregonavto --production-branch=main
           fi
 
-      - name: Deploy branch to Cloudflare Pages
+      - name: Deploy to Cloudflare Pages
         id: deploy
         uses: cloudflare/wrangler-action@v3
         with:
