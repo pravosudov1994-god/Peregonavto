@@ -1,0 +1,47 @@
+name: Deploy to Cloudflare Pages
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  deployments: write
+
+concurrency:
+  group: cloudflare-pages-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy Peregonavto
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Ensure Cloudflare Pages project exists
+        shell: bash
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          set -euo pipefail
+          npx --yes wrangler@latest pages project list --json > /tmp/pages.json
+          if ! node -e "const p=require('/tmp/pages.json'); process.exit(p.some(x=>x.name==='peregonavto')?0:1)"; then
+            npx --yes wrangler@latest pages project create peregonavto --production-branch=main
+          fi
+
+      - name: Deploy to Cloudflare Pages
+        id: deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy . --project-name=peregonavto --branch=${{ github.head_ref || github.ref_name }} --commit-hash=${{ github.sha }}
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
