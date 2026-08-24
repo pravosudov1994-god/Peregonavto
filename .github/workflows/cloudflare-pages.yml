@@ -2,19 +2,22 @@ name: Deploy to Cloudflare Pages
 
 on:
   workflow_dispatch:
+  pull_request:
+    branches:
+      - main
 
 permissions:
   contents: read
   deployments: write
 
 concurrency:
-  group: cloudflare-pages-${{ github.ref }}
+  group: cloudflare-pages-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    name: Deploy Peregonavto
+    name: Deploy Peregonavto Preview
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -32,9 +35,10 @@ jobs:
           fi
 
       - name: Deploy branch to Cloudflare Pages
+        id: deploy
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy . --project-name=peregonavto --branch=${{ github.ref_name }} --commit-hash=${{ github.sha }}
+          command: pages deploy . --project-name=peregonavto --branch=${{ github.head_ref || github.ref_name }} --commit-hash=${{ github.sha }}
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
