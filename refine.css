@@ -1,0 +1,89 @@
+/* Precision pass: closer to the approved mockup */
+:root{
+  --mock-gold:#d9b86c;
+  --mock-gold-soft:#efd99f;
+  --mock-navy:#07131f;
+  --mock-navy-2:#0d1c2a;
+  --mock-cream:#fbfaf7;
+}
+
+body{background:#f8f6f0}
+.site-header{height:84px;background:linear-gradient(180deg,rgba(4,10,17,.62),rgba(4,10,17,.08));backdrop-filter:blur(2px)}
+.header-inner{padding:0 4px}
+.brand-mark{border:0;width:48px;height:48px}
+.brand-mark:before,.brand-mark:after{height:2px;box-shadow:0 0 12px rgba(217,184,108,.2)}
+.brand-mark span{height:32px}
+.brand-text strong{font-size:19px;letter-spacing:.09em}
+.brand-text em{font-size:10px;letter-spacing:.25em}
+.nav{gap:31px;font-size:12px}
+.header-cta{height:46px;min-height:46px;border-radius:3px;padding-inline:27px}
+
+.hero{min-height:676px;border-bottom:1px solid rgba(217,184,108,.32)}
+.hero:before{
+  background:
+  radial-gradient(circle at 74% 38%,rgba(235,197,121,.09),transparent 23%),
+  linear-gradient(90deg,rgba(4,12,20,.985) 0%,rgba(4,12,20,.94) 33%,rgba(4,12,20,.62) 56%,rgba(4,12,20,.18) 100%),
+  linear-gradient(180deg,rgba(0,0,0,.08),rgba(3,10,17,.5)),
+  url('https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=2000&q=90') 65% 52%/cover no-repeat;
+  filter:saturate(.75) contrast(1.05) brightness(.88)
+}
+.hero:after{height:210px;background:linear-gradient(0deg,rgba(7,19,31,.98),rgba(7,19,31,.12))}
+.hero-grid{grid-template-columns:minmax(0,1.38fr) 388px;gap:48px;padding-top:137px;padding-bottom:28px}
+.hero .eyebrow{margin-bottom:14px;color:#d8bd84}
+.hero h1{font-size:55px;line-height:1.1;max-width:735px;margin-bottom:18px}
+.hero-copy{max-width:645px;font-size:15px;line-height:1.72;margin-bottom:24px}
+.hero-actions{margin-bottom:24px}
+.hero-actions .btn{min-width:193px}
+.hero-trust{gap:9px}
+.trust-chip{padding:14px 13px;min-height:96px;border-color:rgba(217,184,108,.18);background:linear-gradient(180deg,rgba(17,31,45,.58),rgba(7,18,30,.78))}
+.trust-chip svg{width:25px;height:25px}
+.trust-chip strong{font-size:12px}.trust-chip span{font-size:9.5px}
+.hero-card{margin-top:-2px;padding:22px 22px 20px;border-radius:6px;background:linear-gradient(180deg,rgba(8,19,30,.97),rgba(8,18,29,.93));box-shadow:0 22px 55px rgba(0,0,0,.32)}
+.hero-card h3{font-size:17px;font-weight:600;margin-bottom:17px}
+.field input,.field select{height:45px;font-size:12px}
+.hero-card .btn{height:47px;min-height:47px}
+
+.benefits{padding-top:38px;padding-bottom:34px}
+.benefits .section-title{font-size:35px}.gold-rule{margin:10px auto 24px;width:58px}
+.benefit-grid{gap:10px}
+.benefit-card{min-height:205px;padding:20px 14px 17px;border-radius:2px}
+.benefit-icon{height:48px;margin-bottom:11px}.benefit-icon svg{width:36px;height:36px}
+.benefit-card h3{font-size:13px}.benefit-card p{font-size:10.3px;line-height:1.48}
+
+.cars{padding-top:28px;padding-bottom:20px}.cars .section-heading{margin-bottom:20px}.cars .section-title{font-size:34px}
+.car-grid{gap:13px}.car-card{border-radius:2px}.car-image{height:193px}.car-body{padding:13px 14px 14px}
+.car-title{font-size:14px}.car-meta{font-size:10px;margin-bottom:9px}.prices{font-size:11.5px}.saving{min-width:87px;padding:8px 9px;font-size:9px}.saving b{font-size:15px}
+
+.process{padding-top:39px;padding-bottom:41px}.process .section-title{font-size:34px}.process .section-lead{font-size:12px;margin-bottom:24px}
+.steps{gap:6px}.steps:before{top:20px}.step-no{width:39px;height:39px;border-width:4px;margin-bottom:12px}.step-icon{height:31px;margin-bottom:6px}.step-icon svg{width:28px;height:28px}.step h3{font-size:12px}.step p{font-size:9.5px;line-height:1.45}
+
+.cost{padding-top:35px;padding-bottom:34px}.cost .section-heading{margin-bottom:14px}.cost .section-title{font-size:34px}.cost-grid{margin-top:15px;grid-template-columns:1fr 24px 1fr 24px 1fr 24px 1fr 32px 1.08fr}
+.cost-box{min-height:102px;padding:15px 14px}.cost-box svg{width:28px;height:28px}.cost-box strong{font-size:12px}.cost-box span{font-size:9.8px}.cost-total{padding:15px}.cost-total strong{font-size:13px}.cost-total span{font-size:9.6px}
+
+.guarantees{padding-top:34px;padding-bottom:32px}.guarantees .section-heading{margin-bottom:16px}.guarantees .section-title{font-size:34px}.guarantee-wrap{gap:18px}.guarantee-cards{gap:8px}.g-card{min-height:158px;padding:18px 15px}.g-card svg{width:31px;height:31px;margin-bottom:10px}.g-card h3{font-size:12px}.g-card p{font-size:9.7px}.contract-block{padding:11px;gap:14px}.contract-block img{height:154px}.contract-copy h3{font-size:18px}.contract-copy p{font-size:10.5px}
+
+.cases{padding-top:27px;padding-bottom:29px}.cases .section-heading{margin-bottom:15px}.cases .section-title{font-size:32px}.case-grid{gap:12px}.case-card{padding:14px;grid-template-columns:46px 1fr}.avatar{width:46px;height:46px;font-size:16px}.case-card h3{font-size:12px}.case-card p{font-size:9.6px}
+
+.final-cta{padding-top:34px;padding-bottom:31px}.final-cta:before{width:30%;opacity:.6}.cta-grid{grid-template-columns:.75fr 1.4fr;gap:28px}.cta-grid h2{font-size:31px}.cta-grid p{font-size:11px}.cta-fields input{height:44px;font-size:11px}.cta-form .btn{height:44px;min-height:44px}
+footer{padding-top:18px;padding-bottom:12px}.footer-top .brand{transform:scale(.92);transform-origin:left center}.footer-contact{gap:20px}.contact-item{font-size:10px}
+
+/* More premium motion and interaction */
+[data-reveal]{opacity:0;transform:translateY(14px);transition:opacity .65s ease,transform .65s ease}
+[data-reveal].is-visible{opacity:1;transform:none}
+.car-card,.benefit-card,.g-card,.case-card,.trust-chip{transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+.car-card:hover,.g-card:hover,.case-card:hover{transform:translateY(-3px);box-shadow:0 14px 35px rgba(9,18,28,.08);border-color:#cfb986}
+.trust-chip:hover{border-color:rgba(217,184,108,.44);transform:translateY(-2px)}
+.btn:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid #efd99f;outline-offset:3px}
+
+/* Sticky compact header after scroll */
+.site-header.is-scrolled{position:fixed;height:70px;background:rgba(5,13,21,.94);backdrop-filter:blur(14px);box-shadow:0 8px 30px rgba(0,0,0,.18);animation:headerDrop .25s ease}
+.site-header.is-scrolled .brand-mark{transform:scale(.88)}
+.site-header.is-scrolled .brand-text strong{font-size:17px}
+@keyframes headerDrop{from{transform:translateY(-100%)}to{transform:none}}
+
+/* Compact mobile menu */
+.mobile-panel{display:none;position:fixed;z-index:90;top:0;right:0;bottom:0;width:min(330px,88vw);padding:92px 26px 30px;background:#081622;color:#fff;border-left:1px solid rgba(217,184,108,.3);box-shadow:-25px 0 60px rgba(0,0,0,.3)}
+.mobile-panel.open{display:block}.mobile-panel a{display:block;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:15px}.mobile-panel .btn{width:100%;margin-top:22px}.mobile-panel-close{position:absolute;right:18px;top:18px;border:0;background:none;color:#fff;padding:8px}
+
+@media(max-width:1100px){.hero-grid{grid-template-columns:1fr 350px}.hero h1{font-size:47px}.cost-grid{grid-template-columns:repeat(2,1fr)}.cost-total{grid-column:span 2}}
+@media(max-width:760px){.hero-grid{grid-template-columns:1fr;padding-top:108px}.hero h1{font-size:38px}.hero-card{margin-top:4px}.benefits{padding-top:48px}.cars,.process,.cost,.guarantees,.cases,.final-cta{padding-top:48px;padding-bottom:48px}.benefits .section-title,.cars .section-title,.process .section-title,.cost .section-title,.guarantees .section-title,.cases .section-title{font-size:29px}.car-image{height:210px}.cost-total{grid-column:auto}}
