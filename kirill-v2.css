@@ -23,10 +23,12 @@
 .camry-checks{display:grid;grid-template-columns:repeat(2,1fr);gap:10px 18px;margin:20px 0 24px}
 .camry-check{display:flex;gap:9px;align-items:flex-start;color:rgba(255,255,255,.76);font-size:12px;line-height:1.45}
 .camry-check svg{width:18px;height:18px;color:var(--gold);flex:0 0 auto;margin-top:1px}
-.camry-side{border:1px solid rgba(214,179,106,.35);background:#0b1927;padding:28px;display:flex;flex-direction:column;justify-content:center}
+.camry-side{border:1px solid rgba(214,179,106,.35);padding:28px;display:flex;flex-direction:column;justify-content:flex-end;min-height:470px;position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(7,17,28,.06) 0%,rgba(7,17,28,.18) 36%,rgba(7,17,28,.94) 76%,#07111c 100%),url('https://commons.wikimedia.org/wiki/Special:Redirect/file/Toyota_Camry_XV70_facelift_Sanming_01_2022-08-13.jpg?width=1280') center/cover no-repeat}
+.camry-side:before{content:"АВТОМОБИЛЬ В БЕЛАРУСИ";position:absolute;top:18px;right:18px;padding:8px 11px;border:1px solid rgba(214,179,106,.55);background:rgba(7,17,28,.82);color:#f0d79d;font-size:9px;font-weight:800;letter-spacing:.08em;backdrop-filter:blur(6px)}
+.camry-side .eyebrow,.camry-side h3,.camry-side p,.camry-side .btn{position:relative;z-index:2}
 .camry-side .eyebrow{margin-bottom:10px}
-.camry-side h3{font-family:Prata,Georgia,serif;font-size:28px;font-weight:400;line-height:1.25;margin:0 0 18px}
-.camry-side p{font-size:12px;line-height:1.65;color:rgba(255,255,255,.62);margin:0 0 20px}
+.camry-side h3{font-family:Prata,Georgia,serif;font-size:28px;font-weight:400;line-height:1.25;margin:0 0 18px;text-shadow:0 2px 16px rgba(0,0,0,.55)}
+.camry-side p{font-size:12px;line-height:1.65;color:rgba(255,255,255,.78);margin:0 0 20px;text-shadow:0 1px 12px rgba(0,0,0,.65)}
 .camry-note{font-size:10px!important;color:rgba(255,255,255,.42)!important;margin-top:14px!important}
 .trust-before-pay{background:#fbfaf7;padding:64px 0}
 .before-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:30px}
@@ -36,5 +38,76 @@
 .before-card span{font-size:10.5px;line-height:1.5;color:#727984}
 .floating-telegram{position:fixed;right:22px;bottom:22px;z-index:40;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#efdaa9,#d8b66e);box-shadow:0 12px 32px rgba(0,0,0,.28);color:#1d160d}
 .floating-telegram svg{width:24px;height:24px}
-@media(max-width:1000px){.camry-wrap{grid-template-columns:1fr}.before-grid{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:700px){.camry-main{padding:24px 18px}.camry-main h2{font-size:31px}.camry-price-grid{grid-template-columns:1fr}.camry-checks{grid-template-columns:1fr}.before-grid{grid-template-columns:repeat(2,1fr)}.floating-telegram{right:14px;bottom:14px;width:52px;height:52px}}
+
+/* Main lead magnet */
+.selection-section{background:#f4f0e7;padding:64px 0;border-bottom:1px solid #e1d6c2;scroll-margin-top:86px}
+.selection-wrap{display:grid;grid-template-columns:minmax(0,.95fr) minmax(440px,1.05fr);gap:46px;align-items:center}
+.selection-copy h2{font-family:Prata,Georgia,serif;font-size:42px;line-height:1.14;font-weight:400;margin:0 0 16px;color:#111820;max-width:620px}
+.selection-copy>p{font-size:14px;line-height:1.75;color:#626a73;max-width:650px;margin:0 0 26px}
+.selection-results{display:grid;gap:10px}
+.selection-result{display:grid;grid-template-columns:46px 1fr;gap:14px;align-items:start;padding:14px 16px;border:1px solid #e0d5c0;background:rgba(255,255,255,.72)}
+.selection-result-no{font-family:Prata,Georgia,serif;color:#b68c48;font-size:22px;line-height:1.2}
+.selection-result strong{display:block;font-size:13px;margin-bottom:4px;color:#17202a}
+.selection-result span{display:block;font-size:10.5px;line-height:1.5;color:#727984}
+.selection-trust{display:flex;gap:10px;align-items:center;margin-top:18px;color:#4f5963;font-size:11px;line-height:1.5;font-weight:600}
+.selection-trust svg{width:21px;height:21px;color:#b68c48;flex:0 0 auto}
+.selection-form{background:linear-gradient(145deg,#07121e,#102436);border:1px solid rgba(214,179,106,.52);box-shadow:0 24px 55px rgba(7,18,31,.19);padding:28px;border-radius:8px;color:#fff}
+.selection-form-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;padding-bottom:17px;margin-bottom:20px;border-bottom:1px solid rgba(214,179,106,.18)}
+.selection-form-head span{font-size:10px;color:rgba(255,255,255,.48);text-transform:uppercase;letter-spacing:.08em}
+.selection-form-head strong{font-family:Prata,Georgia,serif;font-size:23px;font-weight:400;text-align:right}
+.selection-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.selection-form .field{margin:0}
+.selection-form .field label{display:block;font-size:10px;color:#bfc6cd;margin-bottom:6px}
+.selection-form .field input,.selection-form .field select{width:100%;height:48px;background:#112334;border:1px solid rgba(214,179,106,.38);color:#fff;border-radius:3px;padding:0 13px;outline:none}
+.selection-form .field input::placeholder{color:#788591}
+.selection-form .field select option{background:#112334;color:#fff}
+.selection-contact{grid-column:1/-1}
+.selection-submit{width:100%;margin-top:14px}
+.selection-submit svg{width:17px;height:17px}
+.selection-form.is-success{border-color:rgba(110,191,143,.7);box-shadow:0 24px 55px rgba(32,95,60,.18)}
+.selection-form .form-status{min-height:18px;margin-top:9px;color:#f0d79d;font-size:11px;line-height:1.45}
+
+/* Live catalog */
+.live-catalog{background:#fff;padding:72px 0 78px;scroll-margin-top:86px}
+.catalog-head{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;margin-bottom:30px}
+.catalog-head h2{font-family:Prata,Georgia,serif;font-size:42px;line-height:1.14;font-weight:400;margin:0 0 12px;color:#111820}
+.catalog-head p{margin:0;max-width:760px;font-size:13px;line-height:1.7;color:#707780}
+.catalog-filter{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}
+.catalog-filter span{padding:8px 11px;border:1px solid #ddd3c0;background:#faf8f3;font-size:10px;font-weight:700;color:#6d6f72;white-space:nowrap}
+.catalog-filter .is-active{border-color:#caa25b;background:#f2deb0;color:#352811}
+.catalog-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.catalog-card{border:1px solid #dfd5c3;background:#fff;box-shadow:0 10px 34px rgba(10,20,31,.055);display:flex;flex-direction:column;min-width:0;transition:.22s ease}
+.catalog-card:hover{transform:translateY(-3px);box-shadow:0 20px 46px rgba(10,20,31,.10);border-color:#d1bd91}
+.catalog-card-featured{border-color:#caa25b;box-shadow:0 16px 45px rgba(181,139,66,.13)}
+.catalog-visual{height:164px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(circle at 70% 20%,rgba(214,179,106,.32),transparent 35%),linear-gradient(145deg,#07131f,#152a3d)}
+.catalog-visual:after{content:"";position:absolute;left:-10%;right:-10%;bottom:25px;height:1px;background:linear-gradient(90deg,transparent,rgba(240,215,157,.58),transparent);transform:rotate(-3deg)}
+.catalog-visual.camry{background:radial-gradient(circle at 72% 20%,rgba(218,188,121,.34),transparent 35%),linear-gradient(145deg,#07131f,#192c3c)}
+.catalog-visual.tiguan{background:radial-gradient(circle at 68% 22%,rgba(158,179,192,.27),transparent 36%),linear-gradient(145deg,#0c1720,#233645)}
+.catalog-visual.karoq{background:radial-gradient(circle at 70% 24%,rgba(177,148,90,.25),transparent 36%),linear-gradient(145deg,#0b1720,#263329)}
+.catalog-visual.seltos{background:radial-gradient(circle at 70% 20%,rgba(143,158,185,.26),transparent 36%),linear-gradient(145deg,#0c1420,#292b38)}
+.catalog-visual.elantra{background:radial-gradient(circle at 68% 18%,rgba(185,175,157,.27),transparent 38%),linear-gradient(145deg,#10171f,#2f3030)}
+.catalog-visual.audi{background:radial-gradient(circle at 72% 18%,rgba(214,179,106,.28),transparent 36%),linear-gradient(145deg,#0b121a,#261c20)}
+.catalog-car-icon{width:92px;height:92px;border:1px solid rgba(214,179,106,.38);border-radius:50%;display:grid;place-items:center;color:#e3c782;background:rgba(7,18,30,.34);backdrop-filter:blur(4px);box-shadow:0 22px 45px rgba(0,0,0,.25)}
+.catalog-car-icon svg{width:49px;height:49px;stroke-width:1.25}
+.catalog-status{position:absolute;left:14px;top:14px;z-index:2;padding:7px 9px;border:1px solid rgba(214,179,106,.45);background:rgba(7,17,28,.72);color:#f0d79d;font-size:9px;font-weight:800;letter-spacing:.05em;text-transform:uppercase}
+.catalog-body{padding:20px 19px 19px;display:flex;flex:1;flex-direction:column}
+.catalog-country{font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;color:#9a7c49;font-weight:800;margin-bottom:7px}
+.catalog-body h3{font-family:Prata,Georgia,serif;font-size:23px;line-height:1.2;font-weight:400;color:#141a22;margin:0 0 5px}
+.catalog-spec{font-size:11.5px;color:#717780;margin-bottom:17px}
+.catalog-prices{display:grid;grid-template-columns:1fr;gap:7px;margin-bottom:12px}
+.catalog-prices>div{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:7px;border-bottom:1px solid #eee7da}
+.catalog-prices span{font-size:9.5px;color:#848a90}
+.catalog-prices strong{font-size:11.5px;text-align:right;color:#1c232b}
+.catalog-prices-request strong{font-weight:600;color:#656d75}
+.catalog-saving{display:flex;align-items:center;justify-content:space-between;gap:10px;background:linear-gradient(145deg,#f2dfb3,#d8b56d);padding:11px 12px;margin:0 0 14px;color:#2d220f}
+.catalog-saving span{font-size:9.5px;text-transform:uppercase;letter-spacing:.04em;font-weight:700}
+.catalog-saving strong{font-size:15px;text-align:right}
+.catalog-saving.neutral{background:#f4f1ea;border:1px solid #e6dccb;color:#4f565e}
+.catalog-cta{width:100%;margin-top:auto;min-height:44px;font-size:12px}
+.catalog-card-request .btn-outline{color:#2b3138;border-color:#b59a66;background:#fff}
+.catalog-card-request .btn-outline:hover{background:#f8f3e8}
+.catalog-disclaimer{margin-top:19px;display:flex;gap:9px;align-items:flex-start;padding:13px 15px;background:#faf8f4;border:1px solid #e5dccd;color:#707780;font-size:10px;line-height:1.55}
+.catalog-disclaimer svg{width:17px;height:17px;flex:0 0 auto;color:#ae8847;margin-top:1px}
+
+@media(max-width:1000px){.camry-wrap{grid-template-columns:1fr}.before-grid{grid-template-columns:repeat(3,1fr)}.camry-side{min-height:430px}.selection-wrap{grid-template-columns:1fr;gap:28px}.selection-copy h2{max-width:none}.catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.catalog-head{align-items:flex-start;flex-direction:column}.catalog-filter{justify-content:flex-start}}
+@media(max-width:700px){.camry-main{padding:24px 18px}.camry-main h2{font-size:31px}.camry-price-grid{grid-template-columns:1fr}.camry-checks{grid-template-columns:1fr}.before-grid{grid-template-columns:repeat(2,1fr)}.camry-side{min-height:390px;padding:20px}.camry-side h3{font-size:24px}.floating-telegram{right:14px;bottom:14px;width:52px;height:52px}.selection-section{padding:46px 0}.selection-copy h2{font-size:32px}.selection-form{padding:21px 17px}.selection-fields{grid-template-columns:1fr}.selection-contact{grid-column:auto}.selection-form-head{display:block}.selection-form-head strong{display:block;text-align:left;margin-top:7px;font-size:21px}.live-catalog{padding:50px 0}.catalog-head h2{font-size:32px}.catalog-grid{grid-template-columns:1fr}.catalog-visual{height:150px}}
