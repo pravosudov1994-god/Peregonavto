@@ -23,10 +23,12 @@
 .camry-checks{display:grid;grid-template-columns:repeat(2,1fr);gap:10px 18px;margin:20px 0 24px}
 .camry-check{display:flex;gap:9px;align-items:flex-start;color:rgba(255,255,255,.76);font-size:12px;line-height:1.45}
 .camry-check svg{width:18px;height:18px;color:var(--gold);flex:0 0 auto;margin-top:1px}
-.camry-side{border:1px solid rgba(214,179,106,.35);background:#0b1927;padding:28px;display:flex;flex-direction:column;justify-content:center}
+.camry-side{border:1px solid rgba(214,179,106,.35);padding:28px;display:flex;flex-direction:column;justify-content:flex-end;min-height:470px;position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(7,17,28,.06) 0%,rgba(7,17,28,.18) 36%,rgba(7,17,28,.94) 76%,#07111c 100%),url('https://commons.wikimedia.org/wiki/Special:Redirect/file/Toyota_Camry_XV70_facelift_Sanming_01_2022-08-13.jpg?width=1280') center/cover no-repeat}
+.camry-side:before{content:"АВТОМОБИЛЬ В БЕЛАРУСИ";position:absolute;top:18px;right:18px;padding:8px 11px;border:1px solid rgba(214,179,106,.55);background:rgba(7,17,28,.82);color:#f0d79d;font-size:9px;font-weight:800;letter-spacing:.08em;backdrop-filter:blur(6px)}
+.camry-side .eyebrow,.camry-side h3,.camry-side p,.camry-side .btn{position:relative;z-index:2}
 .camry-side .eyebrow{margin-bottom:10px}
-.camry-side h3{font-family:Prata,Georgia,serif;font-size:28px;font-weight:400;line-height:1.25;margin:0 0 18px}
-.camry-side p{font-size:12px;line-height:1.65;color:rgba(255,255,255,.62);margin:0 0 20px}
+.camry-side h3{font-family:Prata,Georgia,serif;font-size:28px;font-weight:400;line-height:1.25;margin:0 0 18px;text-shadow:0 2px 16px rgba(0,0,0,.55)}
+.camry-side p{font-size:12px;line-height:1.65;color:rgba(255,255,255,.78);margin:0 0 20px;text-shadow:0 1px 12px rgba(0,0,0,.65)}
 .camry-note{font-size:10px!important;color:rgba(255,255,255,.42)!important;margin-top:14px!important}
 .trust-before-pay{background:#fbfaf7;padding:64px 0}
 .before-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:30px}
@@ -36,5 +38,5 @@
 .before-card span{font-size:10.5px;line-height:1.5;color:#727984}
 .floating-telegram{position:fixed;right:22px;bottom:22px;z-index:40;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#efdaa9,#d8b66e);box-shadow:0 12px 32px rgba(0,0,0,.28);color:#1d160d}
 .floating-telegram svg{width:24px;height:24px}
-@media(max-width:1000px){.camry-wrap{grid-template-columns:1fr}.before-grid{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:700px){.camry-main{padding:24px 18px}.camry-main h2{font-size:31px}.camry-price-grid{grid-template-columns:1fr}.camry-checks{grid-template-columns:1fr}.before-grid{grid-template-columns:repeat(2,1fr)}.floating-telegram{right:14px;bottom:14px;width:52px;height:52px}}
+@media(max-width:1000px){.camry-wrap{grid-template-columns:1fr}.before-grid{grid-template-columns:repeat(3,1fr)}.camry-side{min-height:430px}}
+@media(max-width:700px){.camry-main{padding:24px 18px}.camry-main h2{font-size:31px}.camry-price-grid{grid-template-columns:1fr}.camry-checks{grid-template-columns:1fr}.before-grid{grid-template-columns:repeat(2,1fr)}.camry-side{min-height:390px;padding:20px}.camry-side h3{font-size:24px}.floating-telegram{right:14px;bottom:14px;width:52px;height:52px}}
