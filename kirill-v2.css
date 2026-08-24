@@ -38,5 +38,34 @@
 .before-card span{font-size:10.5px;line-height:1.5;color:#727984}
 .floating-telegram{position:fixed;right:22px;bottom:22px;z-index:40;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#efdaa9,#d8b66e);box-shadow:0 12px 32px rgba(0,0,0,.28);color:#1d160d}
 .floating-telegram svg{width:24px;height:24px}
-@media(max-width:1000px){.camry-wrap{grid-template-columns:1fr}.before-grid{grid-template-columns:repeat(3,1fr)}.camry-side{min-height:430px}}
-@media(max-width:700px){.camry-main{padding:24px 18px}.camry-main h2{font-size:31px}.camry-price-grid{grid-template-columns:1fr}.camry-checks{grid-template-columns:1fr}.before-grid{grid-template-columns:repeat(2,1fr)}.camry-side{min-height:390px;padding:20px}.camry-side h3{font-size:24px}.floating-telegram{right:14px;bottom:14px;width:52px;height:52px}}
+
+/* Main lead magnet: 3 cars under the client's budget */
+.selection-section{background:#f4f0e7;padding:64px 0;border-bottom:1px solid #e1d6c2;scroll-margin-top:86px}
+.selection-wrap{display:grid;grid-template-columns:minmax(0,.95fr) minmax(440px,1.05fr);gap:46px;align-items:center}
+.selection-copy h2{font-family:Prata,Georgia,serif;font-size:42px;line-height:1.14;font-weight:400;margin:0 0 16px;color:#111820;max-width:620px}
+.selection-copy>p{font-size:14px;line-height:1.75;color:#626a73;max-width:650px;margin:0 0 26px}
+.selection-results{display:grid;gap:10px}
+.selection-result{display:grid;grid-template-columns:46px 1fr;gap:14px;align-items:start;padding:14px 16px;border:1px solid #e0d5c0;background:rgba(255,255,255,.72)}
+.selection-result-no{font-family:Prata,Georgia,serif;color:#b68c48;font-size:22px;line-height:1.2}
+.selection-result strong{display:block;font-size:13px;margin-bottom:4px;color:#17202a}
+.selection-result span{display:block;font-size:10.5px;line-height:1.5;color:#727984}
+.selection-trust{display:flex;gap:10px;align-items:center;margin-top:18px;color:#4f5963;font-size:11px;line-height:1.5;font-weight:600}
+.selection-trust svg{width:21px;height:21px;color:#b68c48;flex:0 0 auto}
+.selection-form{background:linear-gradient(145deg,#07121e,#102436);border:1px solid rgba(214,179,106,.52);box-shadow:0 24px 55px rgba(7,18,31,.19);padding:28px;border-radius:8px;color:#fff}
+.selection-form-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;padding-bottom:17px;margin-bottom:20px;border-bottom:1px solid rgba(214,179,106,.18)}
+.selection-form-head span{font-size:10px;color:rgba(255,255,255,.48);text-transform:uppercase;letter-spacing:.08em}
+.selection-form-head strong{font-family:Prata,Georgia,serif;font-size:23px;font-weight:400;text-align:right}
+.selection-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.selection-form .field{margin:0}
+.selection-form .field label{display:block;font-size:10px;color:#bfc6cd;margin-bottom:6px}
+.selection-form .field input,.selection-form .field select{width:100%;height:48px;background:#112334;border:1px solid rgba(214,179,106,.38);color:#fff;border-radius:3px;padding:0 13px;outline:none}
+.selection-form .field input::placeholder{color:#788591}
+.selection-form .field select option{background:#112334;color:#fff}
+.selection-contact{grid-column:1/-1}
+.selection-submit{width:100%;margin-top:14px}
+.selection-submit svg{width:17px;height:17px}
+.selection-form.is-success{border-color:rgba(110,191,143,.7);box-shadow:0 24px 55px rgba(32,95,60,.18)}
+.selection-form .form-status{min-height:18px;margin-top:9px;color:#f0d79d;font-size:11px;line-height:1.45}
+
+@media(max-width:1000px){.camry-wrap{grid-template-columns:1fr}.before-grid{grid-template-columns:repeat(3,1fr)}.camry-side{min-height:430px}.selection-wrap{grid-template-columns:1fr;gap:28px}.selection-copy h2{max-width:none}}
+@media(max-width:700px){.camry-main{padding:24px 18px}.camry-main h2{font-size:31px}.camry-price-grid{grid-template-columns:1fr}.camry-checks{grid-template-columns:1fr}.before-grid{grid-template-columns:repeat(2,1fr)}.camry-side{min-height:390px;padding:20px}.camry-side h3{font-size:24px}.floating-telegram{right:14px;bottom:14px;width:52px;height:52px}.selection-section{padding:46px 0}.selection-copy h2{font-size:32px}.selection-form{padding:21px 17px}.selection-fields{grid-template-columns:1fr}.selection-contact{grid-column:auto}.selection-form-head{display:block}.selection-form-head strong{display:block;text-align:left;margin-top:7px;font-size:21px}}
