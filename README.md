@@ -1,5 +1,28 @@
-# Peregonavto
+# Peregonavto / Nordline Auto
 
-Landing page for a premium car import service from Belarus and Europe.
+Рабочая версия премиального лендинга по подбору и привозу автомобилей из Беларуси и Европы.
 
-Development branch: `nordline-auto-site`.
+## Структура
+
+- `index.html` — лендинг.
+- `styles.css` — дизайн и адаптив.
+- `app.js` — модальные окна и формы.
+- `functions/api/lead.js` — Cloudflare Pages Function для отправки лидов в Telegram.
+- `_headers` — security/cache headers для Cloudflare Pages.
+
+## Cloudflare Pages
+
+Проект статический, build command не требуется. Корневая директория — репозиторий.
+
+Для работы формы добавить секреты:
+
+- `TELEGRAM_BOT_TOKEN`
+- `TELEGRAM_CHAT_ID`
+
+## Перед публичным запуском
+
+1. Подтвердить финальное название бренда.
+2. Добавить реальные телефон, Telegram, WhatsApp и e-mail.
+3. Заменить демонстрационные цены на подтверждённые актуальные расчёты.
+4. Заменить макетные кейсы реальными подтверждёнными кейсами.
+5. Добавить политику обработки персональных данных и реквизиты агента.
