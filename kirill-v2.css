@@ -1,0 +1,40 @@
+/* KIRILL AUTO v2 overrides */
+.brand-mark{border-color:rgba(214,179,106,.85)}
+.brand-mark:before,.brand-mark:after,.brand-mark span{display:none}
+.brand-mark{font-family:Prata,Georgia,serif;color:var(--gold);font-size:18px;letter-spacing:-.08em}
+.brand-mark::after{content:"KA";display:block;position:static;background:none;height:auto;transform:none}
+.brand-text strong{letter-spacing:.04em}
+.hero h1{max-width:840px}
+.hero-copy{max-width:720px}
+.hero-kicker{display:inline-flex;align-items:center;gap:8px;margin:0 0 16px;padding:8px 12px;border:1px solid rgba(214,179,106,.35);background:rgba(7,18,30,.5);color:#f0d79d;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.camry-feature{background:linear-gradient(135deg,#07111d,#0f2132);color:#fff;padding:68px 0;position:relative;overflow:hidden}
+.camry-feature:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(214,179,106,.14),transparent 32%)}
+.camry-wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:stretch}
+.camry-main{border:1px solid rgba(214,179,106,.38);background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.015));padding:34px}
+.camry-badge{display:inline-flex;align-items:center;gap:8px;color:#f0d79d;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px}
+.camry-main h2{font-family:Prata,Georgia,serif;font-weight:400;font-size:40px;line-height:1.15;margin:0 0 8px}
+.camry-spec{color:rgba(255,255,255,.68);font-size:14px;margin-bottom:24px}
+.camry-price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:24px 0}
+.camry-price{border:1px solid rgba(214,179,106,.22);background:rgba(7,18,30,.64);padding:18px}
+.camry-price span{display:block;font-size:10px;color:rgba(255,255,255,.55);margin-bottom:6px;text-transform:uppercase;letter-spacing:.05em}
+.camry-price strong{display:block;font-family:Prata,Georgia,serif;font-size:23px;font-weight:400;color:#fff}
+.camry-price.highlight{background:linear-gradient(145deg,#efdaa9,#d8b66e);color:#261d10;border-color:transparent}
+.camry-price.highlight span,.camry-price.highlight strong{color:#261d10}
+.camry-checks{display:grid;grid-template-columns:repeat(2,1fr);gap:10px 18px;margin:20px 0 24px}
+.camry-check{display:flex;gap:9px;align-items:flex-start;color:rgba(255,255,255,.76);font-size:12px;line-height:1.45}
+.camry-check svg{width:18px;height:18px;color:var(--gold);flex:0 0 auto;margin-top:1px}
+.camry-side{border:1px solid rgba(214,179,106,.35);background:#0b1927;padding:28px;display:flex;flex-direction:column;justify-content:center}
+.camry-side .eyebrow{margin-bottom:10px}
+.camry-side h3{font-family:Prata,Georgia,serif;font-size:28px;font-weight:400;line-height:1.25;margin:0 0 18px}
+.camry-side p{font-size:12px;line-height:1.65;color:rgba(255,255,255,.62);margin:0 0 20px}
+.camry-note{font-size:10px!important;color:rgba(255,255,255,.42)!important;margin-top:14px!important}
+.trust-before-pay{background:#fbfaf7;padding:64px 0}
+.before-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:30px}
+.before-card{background:#fff;border:1px solid #e4dac7;padding:22px 16px;min-height:150px}
+.before-card svg{width:28px;height:28px;color:#b68c48;margin-bottom:12px}
+.before-card strong{display:block;font-size:12px;margin-bottom:7px}
+.before-card span{font-size:10.5px;line-height:1.5;color:#727984}
+.floating-telegram{position:fixed;right:22px;bottom:22px;z-index:40;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#efdaa9,#d8b66e);box-shadow:0 12px 32px rgba(0,0,0,.28);color:#1d160d}
+.floating-telegram svg{width:24px;height:24px}
+@media(max-width:1000px){.camry-wrap{grid-template-columns:1fr}.before-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.camry-main{padding:24px 18px}.camry-main h2{font-size:31px}.camry-price-grid{grid-template-columns:1fr}.camry-checks{grid-template-columns:1fr}.before-grid{grid-template-columns:repeat(2,1fr)}.floating-telegram{right:14px;bottom:14px;width:52px;height:52px}}
