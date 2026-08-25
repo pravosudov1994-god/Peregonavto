@@ -1,0 +1,12 @@
+/* KIRILL AUTO v2 - Camry animation */
+.camry-animation{position:relative;overflow:hidden;min-height:420px}
+.camry-animation .car{position:absolute;left:50%;bottom:40px;width:900px;transform:translateX(-50%);animation:camryDrive 4s ease-in-out infinite}
+.camry-animation .camry-body{width:100%;display:block}
+.camry-animation .wheel{position:absolute;width:145px;animation:wheelSpin .45s linear infinite}
+.camry-animation .wheel-rear{left:120px;bottom:25px}
+.camry-animation .wheel-front{right:120px;bottom:25px}
+.camry-animation .road{position:absolute;bottom:0;width:200%;height:80px;animation:roadMove 1.2s linear infinite}
+@keyframes wheelSpin{to{transform:rotate(360deg)}}
+@keyframes camryDrive{50%{transform:translateX(calc(-50% + 25px)) translateY(-5px)}}
+@keyframes roadMove{to{transform:translateX(-50%)}}
+@media(max-width:768px){.camry-animation{min-height:280px}.camry-animation .car{width:100%}.camry-animation .wheel{width:80px}}
